@@ -1,3 +1,4 @@
+
 var textInput = document.querySelector("#txt-input");
 var btnTranslate = document.querySelector("#btn-translate");
 
@@ -7,7 +8,5 @@ function clickHandler() {
 
     console.log("clicked!");
     console.log("input:",textInput.value );
-    console.log("HIII")
+
 };
-
-
