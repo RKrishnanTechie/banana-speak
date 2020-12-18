@@ -5,7 +5,7 @@ var outputDiv =  document.querySelector("#output");
 
 btnTranslate.addEventListener("click",clickHandler);
 
-var serverURL = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
+var serverURL = "https://api.funtranslations.com/translate/minion.json";
 
 function getTranslationURL(text){
     return serverURL + "?" + "text=" + text
@@ -25,6 +25,7 @@ fetch(getTranslationURL(inputText))
     .then(Response => Response.json())
     .then(json => 
     {
+        //to get only the translated content 
         translatedText = json.contents.translated;
     //output 
     outputDiv.innerText = translatedText;
