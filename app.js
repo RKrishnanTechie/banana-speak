@@ -31,7 +31,7 @@ fetch(getTranslationURL(inputText))
     outputDiv.innerText = translatedText;
     })
 
-    .catch(errorHandler)
+    .catch(errorHandler);
 }
 
 
