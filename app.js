@@ -5,7 +5,32 @@ var outputDiv =  document.querySelector("#output");
 
 btnTranslate.addEventListener("click",clickHandler);
 
-function clickHandler() {
-    outputDiv.innerHTML = "asdfghjkl " + textInput.value;
+var serverURL = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
 
-};
+function getTranslationURL(text){
+    return serverURL + "?" + "text=" + text
+}
+
+function errorHandler(error){
+    console.log("error occured", error);
+}
+
+function clickHandler() {
+    
+    // get the input
+    inputText = textInput.value;
+     
+    //server processing
+fetch(getTranslationURL(inputText))
+    .then(Response => Response.json())
+    .then(json => 
+    {
+        translatedText = json.contents.translated;
+    //output 
+    outputDiv.innerText = translatedText;
+    })
+
+    .catch(errorHandler)
+}
+
+
