@@ -1,0 +1,16 @@
+#txt-input{
+    width : 60%;
+    height :10vh;
+    margin : 1rem;
+    display:block;
+    padding: 1rem;;
+}
+
+#output{
+    width : 60%;
+    height :10vh;
+    margin : 1rem;
+    display:block;
+    padding: 1rem;
+    border: 1px solid black;
+}
